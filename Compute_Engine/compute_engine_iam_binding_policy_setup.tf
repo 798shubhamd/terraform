@@ -4,6 +4,7 @@ data "google_iam_policy""oslogin" {
        member = [
             "user=var.admin_username",
         ]
+        }
 
 binding{
         role = "roles/compute.osLogin"
