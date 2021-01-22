@@ -8,5 +8,4 @@ variable "scope" { }
 variable "image" { }
 variable "username" { }
 variable "admin_username" { }
-variable "" { }
-variable "" { } 
+
