@@ -3,10 +3,7 @@ variable "instance_name" { }
 variable "machine_type" { }
 variable "zone" { }
 variable "subnetwork_path"{ }
-variable "region"{ }
 variable "scope" { }
 variable "image" { }
-variable "username" { }
-variable "admin_username" { }
-variable "" { }
-variable "" { } 
+variable "network_tags" { }
+variable "service_account_email" { }

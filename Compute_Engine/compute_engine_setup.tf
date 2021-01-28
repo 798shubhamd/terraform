@@ -5,6 +5,7 @@ resource "google_compute_instance" "create_new_compute_engine" {
     zone=var.zone
 
     service_account {
+        email=var.service_account_email
         #To allow full access to all Cloud APIs, use the cloud-platform scope.
       scopes=var.scope
     }
@@ -22,7 +23,7 @@ resource "google_compute_instance" "create_new_compute_engine" {
         subnetwork = var.subnetwork_path
     }
     lifecycle{
-        prevent_destroy=true
+        prevent_destroy=false
     }
 }
 #
@@ -36,4 +37,3 @@ resource "google_compute_instance" "create_new_compute_engine" {
     #lifecycle {
      #   prevent_destroy = true
     #}
-

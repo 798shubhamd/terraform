@@ -1,14 +1,15 @@
-data "google_iam_policy""oslogin" {
+data "google_iam_policy" "oslogin" {
     binding{
         role = "roles/compute.osAdminLogin"
-       member = [
-            "user=var.admin_username",
-        ]
+       members = [
+           "user:suraj.chaskar@datametica.com", 
+       ] 
+    }
 
 binding{
         role = "roles/compute.osLogin"
-        member = [
-            "user=var.username",
+        members = [
+            "user:saurabh.thakur@datametica.com",
         ]
     }
 }
@@ -16,6 +17,6 @@ binding{
 resource "google_compute_instance_iam_policy" "policy" {
     project = google_compute_instance.create_new_compute_engine.project
     zone = google_compute_instance.create_new_compute_engine.zone
-    instance_name = google_compute_instance.create_new_compute_engine.instance_name  
+    instance_name = google_compute_instance.create_new_compute_engine.name  
     policy_data = data.google_iam_policy.oslogin.policy_data
 }

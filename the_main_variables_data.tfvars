@@ -1,5 +1,8 @@
 project_name="shubham-proj-300807"
-zone="us-central1"
-region="us-central1-a"
-network_tags=["https,http"]
-username="saurabh.thakur@datametica.com"
+zone="us-central1-a"
+region="us-central1"
+network_tags=["https"]
+
+#For Bq
+location = "US"
+
