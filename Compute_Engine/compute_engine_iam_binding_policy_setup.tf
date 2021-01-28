@@ -1,10 +1,17 @@
 data "google_iam_policy" "oslogin" {
     binding{
         role = "roles/compute.osAdminLogin"
+<<<<<<< HEAD
        members = [
            "user:suraj.chaskar@datametica.com", 
        ] 
     }
+=======
+       member = [
+            "user=var.admin_username",
+        ]
+        }
+>>>>>>> d08f6491cdb849add96767cb2eb750a2e89dcc28
 
 binding{
         role = "roles/compute.osLogin"
